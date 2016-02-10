@@ -3,7 +3,7 @@
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
-if [ "$SCRIPTPATH" = "/home" ] ; then
+if [ "$SCRIPTPATH" = "/tmp" ] ; then
        SCRIPTPATH=/vagrant
    fi
   
