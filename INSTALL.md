@@ -21,3 +21,4 @@ Installing the RPM
 Install the built RPM by running "sudo yum install RPMS/x86_64/pg_partman-2.2.3-1.el6.x86_64.rpm"
 
 
+PLEASE NOTE pg_dir has to be added to your user path
