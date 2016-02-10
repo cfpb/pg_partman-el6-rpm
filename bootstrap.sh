@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
 sudo yum -y groupinstall 'Development Tools'
-sudo yum -y install java-1.7.1*
-sudo yum -y install vim 
-sudo yum -y install libselinux*
 sudo yum -y install yum localinstall http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
 sudo yum -y install postgresql9*
 sudo yum -y install tree
