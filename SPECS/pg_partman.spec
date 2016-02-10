@@ -4,14 +4,14 @@
 Name:           pg_partman
 Version:        %{_version}
 Release:        1%{?dist}
-Summary:    	pg_partman is an extension to create and manage both time-based and serial-based table partition sets
+Summary:	pg_partman is an extension to create and manage both time-based and serial-based table partition sets
 
 Group:          Development/Tools
-License:	    pg_partman is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.
+License:	pg_partman is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.
 URL:            https://github.com/keithf4/pg_partman
 Source:         https://github.com/keithf4/pg_partman/archive/master.tar.gz
 Obsoletes:      pg_partman <= 2.2.3
-Provides:       pg_partman =  2.2.3
+Provides:       pg_partman => 2.2.3
 
 
 %description
@@ -52,57 +52,57 @@ make
 
 ###############################################################################################################################################################
 %files
-/usr/pgsql-9.4/bin/check_unique_constraint.py
-/usr/pgsql-9.4/bin/dump_partition.py
-/usr/pgsql-9.4/bin/partition_data.py
-/usr/pgsql-9.4/bin/reapply_constraints.py
-/usr/pgsql-9.4/bin/reapply_foreign_keys.py
-/usr/pgsql-9.4/bin/reapply_indexes.py
-/usr/pgsql-9.4/bin/undo_partition.py
-/usr/pgsql-9.4/lib/pg_partman_bgw.so
-/usr/pgsql-9.4/share/extension/pg_partman--0.1.0--0.1.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.1.1--0.1.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.1.2--0.2.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.2.0--0.3.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.3.0--0.3.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.3.1--0.3.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.3.2--0.4.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.4.0--0.4.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.4.1--0.4.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--0.4.2--1.0.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.0.0--1.1.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.1.0--1.2.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.2.0--1.3.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.3.0--1.4.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.0--1.4.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.1--1.4.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.2--1.4.3.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.3--1.4.4.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.4--1.4.5.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.4.5--1.5.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.5.0--1.5.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.5.1--1.6.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.6.0--1.6.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.6.1--1.7.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.7.0--1.7.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.7.1--1.7.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.7.2--1.8.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.0--1.8.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.1--1.8.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.2--1.8.3.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.3--1.8.4.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.4--1.8.5.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.5--1.8.6.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.6--1.8.7.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.7--1.8.8.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.7--2.0.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--1.8.8--2.0.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.0.0--2.1.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.1.0--2.2.0.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.2.0--2.2.1.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.2.1--2.2.2.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.2.2--2.2.3.sql
-/usr/pgsql-9.4/share/extension/pg_partman--2.2.3.sql
-/usr/pgsql-9.4/share/extension/pg_partman.control
+%{pg_dir}/bin/check_unique_constraint.py
+%{pg_dir}/bin/dump_partition.py
+%{pg_dir}/bin/partition_data.py
+%{pg_dir}/bin/reapply_constraints.py
+%{pg_dir}/bin/reapply_foreign_keys.py
+%{pg_dir}/bin/reapply_indexes.py
+%{pg_dir}/bin/undo_partition.py
+%{pg_dir}/lib/pg_partman_bgw.so
+%{pg_dir}/share/extension/pg_partman--0.1.0--0.1.1.sql
+%{pg_dir}/share/extension/pg_partman--0.1.1--0.1.2.sql
+%{pg_dir}/share/extension/pg_partman--0.1.2--0.2.0.sql
+%{pg_dir}/share/extension/pg_partman--0.2.0--0.3.0.sql
+%{pg_dir}/share/extension/pg_partman--0.3.0--0.3.1.sql
+%{pg_dir}/share/extension/pg_partman--0.3.1--0.3.2.sql
+%{pg_dir}/share/extension/pg_partman--0.3.2--0.4.0.sql
+%{pg_dir}/share/extension/pg_partman--0.4.0--0.4.1.sql
+%{pg_dir}/share/extension/pg_partman--0.4.1--0.4.2.sql
+%{pg_dir}/share/extension/pg_partman--0.4.2--1.0.0.sql
+%{pg_dir}/share/extension/pg_partman--1.0.0--1.1.0.sql
+%{pg_dir}/share/extension/pg_partman--1.1.0--1.2.0.sql
+%{pg_dir}/share/extension/pg_partman--1.2.0--1.3.0.sql
+%{pg_dir}/share/extension/pg_partman--1.3.0--1.4.0.sql
+%{pg_dir}/share/extension/pg_partman--1.4.0--1.4.1.sql
+%{pg_dir}/share/extension/pg_partman--1.4.1--1.4.2.sql
+%{pg_dir}/share/extension/pg_partman--1.4.2--1.4.3.sql
+%{pg_dir}/share/extension/pg_partman--1.4.3--1.4.4.sql
+%{pg_dir}/share/extension/pg_partman--1.4.4--1.4.5.sql
+%{pg_dir}/share/extension/pg_partman--1.4.5--1.5.0.sql
+%{pg_dir}/share/extension/pg_partman--1.5.0--1.5.1.sql
+%{pg_dir}/share/extension/pg_partman--1.5.1--1.6.0.sql
+%{pg_dir}/share/extension/pg_partman--1.6.0--1.6.1.sql
+%{pg_dir}/share/extension/pg_partman--1.6.1--1.7.0.sql
+%{pg_dir}/share/extension/pg_partman--1.7.0--1.7.1.sql
+%{pg_dir}/share/extension/pg_partman--1.7.1--1.7.2.sql
+%{pg_dir}/share/extension/pg_partman--1.7.2--1.8.0.sql
+%{pg_dir}/share/extension/pg_partman--1.8.0--1.8.1.sql
+%{pg_dir}/share/extension/pg_partman--1.8.1--1.8.2.sql
+%{pg_dir}/share/extension/pg_partman--1.8.2--1.8.3.sql
+%{pg_dir}/share/extension/pg_partman--1.8.3--1.8.4.sql
+%{pg_dir}/share/extension/pg_partman--1.8.4--1.8.5.sql
+%{pg_dir}/share/extension/pg_partman--1.8.5--1.8.6.sql
+%{pg_dir}/share/extension/pg_partman--1.8.6--1.8.7.sql
+%{pg_dir}/share/extension/pg_partman--1.8.7--1.8.8.sql
+%{pg_dir}/share/extension/pg_partman--1.8.7--2.0.0.sql
+%{pg_dir}/share/extension/pg_partman--1.8.8--2.0.0.sql
+%{pg_dir}/share/extension/pg_partman--2.0.0--2.1.0.sql
+%{pg_dir}/share/extension/pg_partman--2.1.0--2.2.0.sql
+%{pg_dir}/share/extension/pg_partman--2.2.0--2.2.1.sql
+%{pg_dir}/share/extension/pg_partman--2.2.1--2.2.2.sql
+%{pg_dir}/share/extension/pg_partman--2.2.2--2.2.3.sql
+%{pg_dir}/share/extension/pg_partman--2.2.3.sql
+%{pg_dir}/share/extension/pg_partman.control
 /usr/share/doc/pgsql/extension/pg_partman.md
 /usr/share/doc/pgsql/extension/pg_partman_howto.md

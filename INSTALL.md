@@ -14,7 +14,7 @@ Build RPM on server
 
 1. Once repo is cloned, run "sh ./bootstrap.sh"
 2. cd to ~/rpmbuild 
-3. Run rpmbuild -ba /SPECS/pg_partman.spec 'pg_dir /usr/pgsql-9.4'
+3. Run rpmbuild -ba /SPECS/pg_partman.spec --define 'pg_dir /usr/pgsql-9.4'
 
 Installing the RPM 
 
