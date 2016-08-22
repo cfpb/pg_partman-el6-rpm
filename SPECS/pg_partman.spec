@@ -42,67 +42,15 @@ make
 
 ###############################################################################################################################################################
 %install
-#mkdir -p %{buildroot}/etc/profile.d
-#echo "export PATH=$PATH:%{pg_dir}/bin/" >> %{buildroot}/etc/profile.d/pg_partman.sh
-#echo "export USE_PGXS=1" >> %{buildroot}/etc/profile.d/pg_partman.sh
-#source %{buildroot}/etc/profile.d/pg_partman.sh
+mkdir -p %{buildroot}/etc/profile.d
+echo "export PATH=$PATH:%{pg_dir}/bin/" >> %{buildroot}/etc/profile.d/pg_partman.sh
+echo "export USE_PGXS=1" >> %{buildroot}/etc/profile.d/pg_partman.sh
+source %{buildroot}/etc/profile.d/pg_partman.sh
 
 %make_install
 
 
 ###############################################################################################################################################################
 %files
-%{pg_dir}/bin/check_unique_constraint.py
-%{pg_dir}/bin/dump_partition.py
-%{pg_dir}/bin/partition_data.py
-%{pg_dir}/bin/reapply_constraints.py
-%{pg_dir}/bin/reapply_foreign_keys.py
-%{pg_dir}/bin/reapply_indexes.py
-%{pg_dir}/bin/undo_partition.py
-%{pg_dir}/lib/pg_partman_bgw.so
-%{pg_dir}/share/extension/pg_partman--0.1.0--0.1.1.sql
-%{pg_dir}/share/extension/pg_partman--0.1.1--0.1.2.sql
-%{pg_dir}/share/extension/pg_partman--0.1.2--0.2.0.sql
-%{pg_dir}/share/extension/pg_partman--0.2.0--0.3.0.sql
-%{pg_dir}/share/extension/pg_partman--0.3.0--0.3.1.sql
-%{pg_dir}/share/extension/pg_partman--0.3.1--0.3.2.sql
-%{pg_dir}/share/extension/pg_partman--0.3.2--0.4.0.sql
-%{pg_dir}/share/extension/pg_partman--0.4.0--0.4.1.sql
-%{pg_dir}/share/extension/pg_partman--0.4.1--0.4.2.sql
-%{pg_dir}/share/extension/pg_partman--0.4.2--1.0.0.sql
-%{pg_dir}/share/extension/pg_partman--1.0.0--1.1.0.sql
-%{pg_dir}/share/extension/pg_partman--1.1.0--1.2.0.sql
-%{pg_dir}/share/extension/pg_partman--1.2.0--1.3.0.sql
-%{pg_dir}/share/extension/pg_partman--1.3.0--1.4.0.sql
-%{pg_dir}/share/extension/pg_partman--1.4.0--1.4.1.sql
-%{pg_dir}/share/extension/pg_partman--1.4.1--1.4.2.sql
-%{pg_dir}/share/extension/pg_partman--1.4.2--1.4.3.sql
-%{pg_dir}/share/extension/pg_partman--1.4.3--1.4.4.sql
-%{pg_dir}/share/extension/pg_partman--1.4.4--1.4.5.sql
-%{pg_dir}/share/extension/pg_partman--1.4.5--1.5.0.sql
-%{pg_dir}/share/extension/pg_partman--1.5.0--1.5.1.sql
-%{pg_dir}/share/extension/pg_partman--1.5.1--1.6.0.sql
-%{pg_dir}/share/extension/pg_partman--1.6.0--1.6.1.sql
-%{pg_dir}/share/extension/pg_partman--1.6.1--1.7.0.sql
-%{pg_dir}/share/extension/pg_partman--1.7.0--1.7.1.sql
-%{pg_dir}/share/extension/pg_partman--1.7.1--1.7.2.sql
-%{pg_dir}/share/extension/pg_partman--1.7.2--1.8.0.sql
-%{pg_dir}/share/extension/pg_partman--1.8.0--1.8.1.sql
-%{pg_dir}/share/extension/pg_partman--1.8.1--1.8.2.sql
-%{pg_dir}/share/extension/pg_partman--1.8.2--1.8.3.sql
-%{pg_dir}/share/extension/pg_partman--1.8.3--1.8.4.sql
-%{pg_dir}/share/extension/pg_partman--1.8.4--1.8.5.sql
-%{pg_dir}/share/extension/pg_partman--1.8.5--1.8.6.sql
-%{pg_dir}/share/extension/pg_partman--1.8.6--1.8.7.sql
-%{pg_dir}/share/extension/pg_partman--1.8.7--1.8.8.sql
-%{pg_dir}/share/extension/pg_partman--1.8.7--2.0.0.sql
-%{pg_dir}/share/extension/pg_partman--1.8.8--2.0.0.sql
-%{pg_dir}/share/extension/pg_partman--2.0.0--2.1.0.sql
-%{pg_dir}/share/extension/pg_partman--2.1.0--2.2.0.sql
-%{pg_dir}/share/extension/pg_partman--2.2.0--2.2.1.sql
-%{pg_dir}/share/extension/pg_partman--2.2.1--2.2.2.sql
-%{pg_dir}/share/extension/pg_partman--2.2.2--2.2.3.sql
-%{pg_dir}/share/extension/pg_partman--2.2.3.sql
-%{pg_dir}/share/extension/pg_partman.control
-/usr/share/doc/pgsql/extension/pg_partman.md
-/usr/share/doc/pgsql/extension/pg_partman_howto.md
+/etc/profile.d
+/usr/pgsql-9.5
