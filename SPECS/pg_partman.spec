@@ -1,7 +1,7 @@
 %global _version 2.2.3
 
 
-Name:           pg_partman
+Name:           pg_partman%{suffix}
 Version:        %{_version}
 Release:        1%{?dist}
 Summary:	pg_partman is an extension to create and manage both time-based and serial-based table partition sets
@@ -10,8 +10,8 @@ Group:          Development/Tools
 License:	pg_partman is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.
 URL:            https://github.com/keithf4/pg_partman
 Source:         https://github.com/keithf4/pg_partman/archive/master.tar.gz
-Obsoletes:      pg_partman <= 2.2.3
-Provides:       pg_partman => 2.2.3
+Obsoletes:      pg_partman%{suffix} <= 2.2.3
+Provides:       pg_partman%{suffix} => 2.2.3
 
 
 %description
