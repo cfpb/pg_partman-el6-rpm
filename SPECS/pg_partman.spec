@@ -38,10 +38,11 @@ BuildRoot: %(mktemp -ud %{_tmppath}/build/%{name}-%{version}-%{release}-XXXXXX)
 ###############################################################################################################################################################
 %build
 
-make
+make %{?_smp_mflags}
 
 ###############################################################################################################################################################
 %install
+
 mkdir -p %{buildroot}/etc/profile.d
 echo "export PATH=$PATH:%{pg_dir}/bin/" >> %{buildroot}/etc/profile.d/pg_partman.sh
 echo "export USE_PGXS=1" >> %{buildroot}/etc/profile.d/pg_partman.sh
