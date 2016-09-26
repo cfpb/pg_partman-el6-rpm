@@ -11,7 +11,7 @@ License:	pg_partman is released under the PostgreSQL License, a liberal Open Sou
 URL:            https://github.com/keithf4/pg_partman
 Source:         https://github.com/keithf4/pg_partman/archive/master.tar.gz
 Obsoletes:      pg_partman%{_suffix} <= 2.2.3
-Provides:       pg_partman%{_suffix} => 2.2.3
+Provides:       pg_partman%{_suffix} = 2.2.3
 
 
 %description
