@@ -1,7 +1,7 @@
 %global _version 2.2.3
 
 
-Name:           pg_partman%{suffix}
+Name:           pg_partman%{_suffix}
 Version:        %{_version}
 Release:        1%{?dist}
 Summary:	pg_partman is an extension to create and manage both time-based and serial-based table partition sets
@@ -10,8 +10,8 @@ Group:          Development/Tools
 License:	pg_partman is released under the PostgreSQL License, a liberal Open Source license, similar to the BSD or MIT licenses.
 URL:            https://github.com/keithf4/pg_partman
 Source:         https://github.com/keithf4/pg_partman/archive/master.tar.gz
-Obsoletes:      pg_partman%{suffix} <= 2.2.3
-Provides:       pg_partman%{suffix} => 2.2.3
+Obsoletes:      pg_partman%{_suffix} <= 2.2.3
+Provides:       pg_partman%{_suffix} => 2.2.3
 
 
 %description
@@ -37,21 +37,18 @@ BuildRoot: %(mktemp -ud %{_tmppath}/build/%{name}-%{version}-%{release}-XXXXXX)
 
 ###############################################################################################################################################################
 %build
+CFLAGS="-O3 -Wall -Wno-format-security"
+LDFLAGS="-pthread"
 
 make %{?_smp_mflags}
 
 ###############################################################################################################################################################
 %install
 
-mkdir -p %{buildroot}/etc/profile.d
-echo "export PATH=$PATH:%{pg_dir}/bin/" >> %{buildroot}/etc/profile.d/pg_partman.sh
-echo "export USE_PGXS=1" >> %{buildroot}/etc/profile.d/pg_partman.sh
-source %{buildroot}/etc/profile.d/pg_partman.sh
-
-%make_install
+make install USE_PGXS=1 DESTDIR=${RPM_BUILD_ROOT}
 
 
 ###############################################################################################################################################################
 %files
-/etc/profile.d
-/usr/pgsql-9.5
+%{pg_dir}
+%{pg_dir}/bin/dump_partition.py
